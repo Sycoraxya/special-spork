@@ -8,40 +8,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var Effects = function Effects(EffectName) {
   _classCallCheck(this, Effects);
 };
-'use strict';
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 /**
  * Created by stefa on 2-8-2016.
  */
-var PageState = function () {
-				function PageState() {
-								_classCallCheck(this, PageState);
-
-								document.write('Initiating..');
-								window.pageState = { steps: [] };
-								pageState.currentStep = 0;
-								PageState.setState({ step: 'Loading' });
-				}
-
-				_createClass(PageState, null, [{
-								key: 'setState',
-								value: function setState(state) {
-												if (typeof state.step !== "undefined") {
-																pageState.steps.push(state.step);
-												}
-								}
-				}]);
-
-				return PageState;
-}();
-
-$(document).ready(function () {
-				new PageState();
-});
+// class PageState {
+//     constructor() {
+// 	    document.write('Initiating..');
+// 	    window.pageState = {steps:[]};
+// 	    pageState.currentStep = 0;
+// 	    PageState.setState({step: 'Loading'});
+//     }
+//
+//
+//     static setState(state) {
+// 	    if (typeof state.step !== "undefined") {
+// 			pageState.steps.push(state.step);
+// 	    }
+//     }
+// }
+// $(document).ready(function(){new PageState()});
+"use strict";
 "use strict";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -64,4 +50,4 @@ var Loading = function (_Effects) {
 
   return Loading;
 }(Effects);
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkVmZmVjdHMuanMiLCJQYWdlU3RhdGUuanMiLCJlZmZlY3RzL0xvYWRpbmcuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBOzs7SUFHTSxVQUNMLGlCQUFhLFVBQWIsRUFBeUI7QUFBQTtBQUV4Qjs7Ozs7OztBQ05GOzs7SUFHTTtBQUNGLHlCQUFjO0FBQUE7O0FBQ2IsaUJBQVMsS0FBVCxDQUFlLGNBQWY7QUFDQSxlQUFPLFNBQVAsR0FBbUIsRUFBQyxPQUFNLEVBQVAsRUFBbkI7QUFDQSxrQkFBVSxXQUFWLEdBQXdCLENBQXhCO0FBQ0Esa0JBQVUsUUFBVixDQUFtQixFQUFDLE1BQU0sU0FBUCxFQUFuQjtBQUNBOzs7O2lDQUdlLE9BQU87QUFDdEIsZ0JBQUksT0FBTyxNQUFNLElBQWIsS0FBc0IsV0FBMUIsRUFBdUM7QUFDekMsMEJBQVUsS0FBVixDQUFnQixJQUFoQixDQUFxQixNQUFNLElBQTNCO0FBQ0c7QUFDRDs7Ozs7O0FBRUwsRUFBRSxRQUFGLEVBQVksS0FBWixDQUFrQixZQUFVO0FBQUMsUUFBSSxTQUFKO0FBQWdCLENBQTdDOzs7Ozs7Ozs7QUNsQkE7OztJQUdNOzs7QUFDRixxQkFBYztBQUFBOztBQUFBO0FBRWI7OztFQUhpQiIsImZpbGUiOiJhcHAuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcclxuICogQ3JlYXRlZCBieSBTdGVmYW4gb24gMDEvMDgvMjAxNi5cclxuICovXHJcbmNsYXNzIEVmZmVjdHMge1xyXG5cdGNvbnN0cnVjdG9yIChFZmZlY3ROYW1lKSB7XHJcblxyXG5cdH1cclxufSIsIi8qKlxyXG4gKiBDcmVhdGVkIGJ5IHN0ZWZhIG9uIDItOC0yMDE2LlxyXG4gKi9cclxuY2xhc3MgUGFnZVN0YXRlIHtcclxuICAgIGNvbnN0cnVjdG9yKCkge1xyXG5cdCAgICBkb2N1bWVudC53cml0ZSgnSW5pdGlhdGluZy4uJyk7XHJcblx0ICAgIHdpbmRvdy5wYWdlU3RhdGUgPSB7c3RlcHM6W119O1xyXG5cdCAgICBwYWdlU3RhdGUuY3VycmVudFN0ZXAgPSAwO1xyXG5cdCAgICBQYWdlU3RhdGUuc2V0U3RhdGUoe3N0ZXA6ICdMb2FkaW5nJ30pO1xyXG4gICAgfVxyXG5cclxuXHJcbiAgICBzdGF0aWMgc2V0U3RhdGUoc3RhdGUpIHtcclxuXHQgICAgaWYgKHR5cGVvZiBzdGF0ZS5zdGVwICE9PSBcInVuZGVmaW5lZFwiKSB7XHJcblx0XHRcdHBhZ2VTdGF0ZS5zdGVwcy5wdXNoKHN0YXRlLnN0ZXApO1xyXG5cdCAgICB9XHJcbiAgICB9XHJcbn1cclxuJChkb2N1bWVudCkucmVhZHkoZnVuY3Rpb24oKXtuZXcgUGFnZVN0YXRlKCl9KTsiLCIvKipcclxuICogQ3JlYXRlZCBieSBzdGVmYSBvbiAyLTgtMjAxNi5cclxuICovXHJcbmNsYXNzIExvYWRpbmcgZXh0ZW5kcyBFZmZlY3Rze1xyXG4gICAgY29uc3RydWN0b3IoKSB7XHJcblx0XHRzdXBlcigpXHJcbiAgICB9XHJcbn0iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkVmZmVjdHMuanMiLCJQYWdlU3RhdGUuanMiLCJlZmZlY3RzL0xvYWRpbmcuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBOzs7SUFHTSxVQUNMLGlCQUFhLFVBQWIsRUFBeUI7QUFBQTtBQUV4QjtBQ05GOzs7QUFHQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7Ozs7Ozs7OztBQ2xCQTs7O0lBR007OztBQUNGLHFCQUFjO0FBQUE7O0FBQUE7QUFFYjs7O0VBSGlCIiwiZmlsZSI6ImFwcC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxyXG4gKiBDcmVhdGVkIGJ5IFN0ZWZhbiBvbiAwMS8wOC8yMDE2LlxyXG4gKi9cclxuY2xhc3MgRWZmZWN0cyB7XHJcblx0Y29uc3RydWN0b3IgKEVmZmVjdE5hbWUpIHtcclxuXHJcblx0fVxyXG59IiwiLyoqXHJcbiAqIENyZWF0ZWQgYnkgc3RlZmEgb24gMi04LTIwMTYuXHJcbiAqL1xyXG4vLyBjbGFzcyBQYWdlU3RhdGUge1xyXG4vLyAgICAgY29uc3RydWN0b3IoKSB7XHJcbi8vIFx0ICAgIGRvY3VtZW50LndyaXRlKCdJbml0aWF0aW5nLi4nKTtcclxuLy8gXHQgICAgd2luZG93LnBhZ2VTdGF0ZSA9IHtzdGVwczpbXX07XHJcbi8vIFx0ICAgIHBhZ2VTdGF0ZS5jdXJyZW50U3RlcCA9IDA7XHJcbi8vIFx0ICAgIFBhZ2VTdGF0ZS5zZXRTdGF0ZSh7c3RlcDogJ0xvYWRpbmcnfSk7XHJcbi8vICAgICB9XHJcbi8vXHJcbi8vXHJcbi8vICAgICBzdGF0aWMgc2V0U3RhdGUoc3RhdGUpIHtcclxuLy8gXHQgICAgaWYgKHR5cGVvZiBzdGF0ZS5zdGVwICE9PSBcInVuZGVmaW5lZFwiKSB7XHJcbi8vIFx0XHRcdHBhZ2VTdGF0ZS5zdGVwcy5wdXNoKHN0YXRlLnN0ZXApO1xyXG4vLyBcdCAgICB9XHJcbi8vICAgICB9XHJcbi8vIH1cclxuLy8gJChkb2N1bWVudCkucmVhZHkoZnVuY3Rpb24oKXtuZXcgUGFnZVN0YXRlKCl9KTsiLCIvKipcclxuICogQ3JlYXRlZCBieSBzdGVmYSBvbiAyLTgtMjAxNi5cclxuICovXHJcbmNsYXNzIExvYWRpbmcgZXh0ZW5kcyBFZmZlY3Rze1xyXG4gICAgY29uc3RydWN0b3IoKSB7XHJcblx0ICAgIHN1cGVyKClcclxuICAgIH1cclxufSJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==
