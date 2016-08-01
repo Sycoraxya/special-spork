@@ -3,6 +3,6 @@
  */
 class Loading extends Effects{
     constructor() {
-	    super()
+	    super();
     }
 }
