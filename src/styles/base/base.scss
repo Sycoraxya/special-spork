@@ -1,0 +1,179 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	font-family: helvetica;
+}
+
+.sideNav {
+	position: fixed;
+	right: 0;
+	width: 20px;
+	z-index: 10;
+	height: 30px;
+	background: black;
+	top: 50%;
+	transform: translateY(-50%);
+
+	> span {
+		display: inline-block;
+		height: 50px;
+		width: 20px;
+		background: white;
+		cursor: pointer;
+
+		.selected {
+			background: #65C6BB;
+		}
+	}
+}
+
+body > section {
+	transition: transform 0.3s ease;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	&.high {
+		transform: translateY(-100vh);
+	}
+
+	&.is-active {
+		transform: translateY(0vh);
+	}
+
+	&.low {
+		transform: translateY(100vh);
+	}
+}
+
+.een {
+	background-image: url("../img/FP8EF43PFV.jpg");
+	height: 100vh;
+	width: 100vw;
+	background-size: cover;
+	display: table;
+	background-position: center;
+
+	h1 {
+		vertical-align: middle;
+		display: table-cell;
+		text-align: center;
+		font-size: 5em;
+		text-transform: uppercase;
+		color: #fff;
+		text-shadow: 1px 1px 1px #000;
+
+		.kleur {
+			color: #65C6BB;
+		}
+	}
+}
+
+.avengers {
+	display: table;
+	height: 100vh;
+	width: 100vw;
+	background-image: url("../img/YNI4E0XAAS.jpg");
+	background-size: cover;
+	background-position: center;
+
+	> div {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		color: white;
+		background-color: rgba(0, 0, 0, 0.4);
+
+		h2 {
+			font-size: 4em;
+			display: inline-block;
+			padding-bottom: 15px;
+			border-bottom: 1px solid #ccc;
+			margin-bottom: 10px;
+		}
+
+		h4 {
+			font-size: 2em;
+		}
+	}
+}
+
+.stefan {
+	display: table;
+	height: 100vh;
+	width: 100vw;
+	background-image: url("../img/055MVXJ6N9.jpg");
+	background-size: cover;
+	background-position: center;
+
+	> div {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		color: white;
+		background-color: rgba(0, 0, 0, 0.4);
+
+		h2 {
+			font-size: 4em;
+			display: inline-block;
+			padding-bottom: 15px;
+			border-bottom: 1px solid #ccc;
+			margin-bottom: 10px;
+		}
+
+		h4 {
+			font-size: 2em;
+		}
+	}
+}
+

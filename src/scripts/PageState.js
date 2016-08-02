@@ -1,19 +1,47 @@
 /**
- * Created by stefa on 2-8-2016.
+ * Created by Stefan on 02/08/2016.
  */
-// class PageState {
-//     constructor() {
-// 	    document.write('Initiating..');
-// 	    window.pageState = {steps:[]};
-// 	    pageState.currentStep = 0;
-// 	    PageState.setState({step: 'Loading'});
-//     }
-//
-//
-//     static setState(state) {
-// 	    if (typeof state.step !== "undefined") {
-// 			pageState.steps.push(state.step);
-// 	    }
-//     }
-// }
-// $(document).ready(function(){new PageState()});
+class PageState {
+	constructor () {
+		this.createGlobal();
+		this.getSections();
+		this.getCurrentSection();
+
+		this.newHulahoop();
+	}
+
+	createGlobal () {
+		window.pageState = {
+			sections     : [],
+			currenSection: ''
+		};
+	}
+
+	// alle sections ophalen en in een array gooien
+	getSections () {
+		$('body > section').each(function () {
+			let section     = $(this),
+			    sectionName = $(section).attr('data-name');
+			pageState.sections.push(sectionName);
+		})
+	}
+
+	// kijken of er een current section is
+	getCurrentSection () {
+		if (window.location.hash) {
+			pageState.currenSection = window.location.hash;
+			// scroll naar die section
+		} else {
+			pageState.currenSection = 'een';
+		}
+	}
+
+	newHulahoop () {
+		new Scroll();
+	}
+
+
+}
+$(document).ready(function () {
+	new PageState();
+});
